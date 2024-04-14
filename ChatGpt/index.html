@@ -4,127 +4,160 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DelightfulCooks - Home Baking and Cooking Classes</title>
+  <title>Delicious Delights</title>
   <style>
-    /* Global Styles */
-    * {
-      box-sizing: border-box;
+    /* General styles */
+    body {
+      font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
     }
 
-    body {
-      font-family: Arial, sans-serif;
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
     }
 
-    /* Header Styles */
     header {
       background-color: #f8f8f8;
       padding: 10px 0;
       text-align: center;
     }
 
-    .logo {
-      font-size: 24px;
-      font-weight: bold;
-    }
-
-    /* Navigation Styles */
     nav {
-      background-color: #333;
-      color: #fff;
-      padding: 10px 0;
+      margin-top: 20px;
       text-align: center;
     }
 
-    nav ul {
-      list-style-type: none;
-    }
-
-    nav ul li {
-      display: inline;
-      margin-right: 20px;
-    }
-
-    nav ul li a {
-      color: #fff;
+    nav a {
+      margin: 0 15px;
       text-decoration: none;
+      color: #333;
+      font-weight: bold;
     }
 
-    /* Body Styles */
-    .container {
-      max-width: 1200px;
-      margin: 20px auto;
-      padding: 0 20px;
+    nav a:hover {
+      color: #ff6600;
     }
 
-    .hero-image {
-      width: 100%;
-      height: 300px;
-      background-image: url('cake_image.jpg');
+    /* Hero section */
+    .hero {
+      background-image: url('https://via.placeholder.com/1200x400');
       background-size: cover;
       background-position: center;
+      color: #fff;
+      text-align: center;
+      padding: 100px 0;
+    }
+
+    .hero h1 {
+      font-size: 48px;
       margin-bottom: 20px;
     }
 
-    .section {
+    .hero p {
+      font-size: 18px;
       margin-bottom: 30px;
     }
 
-    /* Footer Styles */
+    /* Classes section */
+    .classes {
+      background-color: #f8f8f8;
+      padding: 50px 0;
+    }
+
+    .class-card {
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      margin-bottom: 20px;
+      padding: 20px;
+    }
+
+    .class-card h2 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    .class-card p {
+      font-size: 16px;
+    }
+
+    /* Footer */
     footer {
       background-color: #333;
       color: #fff;
       text-align: center;
-      padding: 10px 0;
-      position: absolute;
-      bottom: 0;
-      width: 100%;
+      padding: 20px 0;
+    }
+
+    footer p {
+      margin: 0;
     }
   </style>
 </head>
 
 <body>
   <header>
-    <div class="logo">DelightfulCooks</div>
+    <h1>Delicious Delights</h1>
+    <img src="https://via.placeholder.com/150" alt="Delicious Delights Logo">
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#classes">Classes</a>
+      <a href="#about">About Us</a>
+      <a href="#contact">Contact</a>
+    </nav>
   </header>
 
-  <nav>
-    <ul>
-      <li><a href="#home">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#courses">Courses</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
-
   <div class="container">
-    <div class="hero-image"></div>
+    <section id="home" class="hero">
+      <h1>Welcome to Delicious Delights</h1>
+      <p>Explore the art of baking and cooking from the comfort of your home.</p>
+      <a href="#classes">View Classes</a>
+    </section>
 
-    <div id="home" class="section">
-      <h2>Welcome to DelightfulCooks</h2>
-      <p>Learn the art of baking and cooking from the comfort of your home with our online classes.</p>
-    </div>
+    <section id="classes" class="classes">
+      <h2>Our Classes</h2>
+      <div class="class-card">
+        <h2>Cake Decorating Masterclass</h2>
+        <p>Learn to create stunning cake designs with our expert instructors.</p>
+      </div>
+      <div class="class-card">
+        <h2>Cooking Essentials</h2>
+        <p>Master the basics of cooking with our step-by-step tutorials.</p>
+      </div>
+      <!-- Add more class cards as needed -->
+    </section>
 
-    <div id="about" class="section">
+    <section id="about" class="about">
       <h2>About Us</h2>
-      <p>DelightfulCooks is dedicated to teaching you the skills needed to create delicious cakes and meals.</p>
-    </div>
+      <p>Delicious Delights is committed to bringing the joy of cooking and baking to everyone. Our experienced chefs
+        are passionate about teaching and sharing their skills with you.</p>
+    </section>
 
-    <div id="courses" class="section">
-      <h2>Our Courses</h2>
-      <p>Choose from a variety of courses tailored to your skill level, from beginner to advanced.</p>
-    </div>
-
-    <div id="contact" class="section">
+    <section id="contact" class="contact">
       <h2>Contact Us</h2>
-      <p>Have a question? Reach out to us at info@delightfulcooks.com or call us at 1-800-123-4567.</p>
-    </div>
+      <p>Have questions or need assistance? Reach out to us!</p>
+      <form action="#" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
   </div>
 
   <footer>
-    <p>&copy; 2024 DelightfulCooks. All rights reserved.</p>
+    <p>&copy; 2024 Delicious Delights. All rights reserved.</p>
   </footer>
+
+  <script>
+    // Add JavaScript functionality here if needed
+  </script>
 </body>
 
 </html>
